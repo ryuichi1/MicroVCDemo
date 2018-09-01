@@ -8,18 +8,17 @@
 
 import UIKit
 import Mew
+import RxCocoa
+import RxSwift
 
 class ListViewController: UIViewController, Instantiatable, Injectable {
-    var environment: EnvironmentMock
+    typealias Environment = EnvironmentMock
+    typealias Input = ListInputState
     
     required init(with input: ListInputState, environment: EnvironmentMock) {
         self.environment = environment
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
-    
-    typealias Environment = EnvironmentMock
-    
-    typealias Input = ListInputState
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -28,23 +27,27 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
     func input(_ input: ListInputState) {
         switch input {
         case .add(let textString):
-            list.append(textString)
+            listViewModel.items.value.append(textString)
         case .removeAll:
-            list = []
+            listViewModel.items.value = []
         }
         tableView.reloadData()
     }
     
-    var list: [String] = []
+    var environment: EnvironmentMock
+    var dataSource: ListTableViewDataSource!
+    var listViewModel = ListViewModel()
+    let disposeBag = DisposeBag()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         constructCell()
-        tableView.delegate = self
-        tableView.dataSource = self
-        self.tableView.reloadData()
+        dataSource = ListTableViewDataSource(items: listViewModel.items.value)
+        listViewModel.items.asDriver()
+            .drive(self.tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,25 +57,5 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
     func constructCell() {
         let nib = UINib(nibName: "ListTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "ListTableViewCell")
-    }
-}
-
-extension ListViewController: UITableViewDelegate {
-    
-}
-
-extension ListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath) as! ListTableViewCell
-        cell.label.text = list[indexPath.row]
-        return cell
     }
 }

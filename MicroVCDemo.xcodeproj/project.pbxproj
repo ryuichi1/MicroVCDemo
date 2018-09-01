@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B0BE502A213AFBE7006C3DB4 /* ListInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */; };
+		B0BE502C213B032E006C3DB4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE502B213B032E006C3DB4 /* ListViewModel.swift */; };
+		B0BE502E213B03C9006C3DB4 /* ListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE502D213B03C9006C3DB4 /* ListTableViewDataSource.swift */; };
 		B0CF5F2921399798007E81C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5F2821399798007E81C1 /* AppDelegate.swift */; };
 		B0CF5F2B21399798007E81C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5F2A21399798007E81C1 /* MainViewController.swift */; };
 		B0CF5F3021399799007E81C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CF5F2F21399799007E81C1 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		803329489752BC6416164B81 /* Pods-MicroVCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroVCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroVCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInputState.swift; sourceTree = "<group>"; };
+		B0BE502B213B032E006C3DB4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		B0BE502D213B03C9006C3DB4 /* ListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewDataSource.swift; sourceTree = "<group>"; };
 		B0CF5F2521399798007E81C1 /* MicroVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF5F2821399798007E81C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0CF5F2A21399798007E81C1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,15 @@
 				88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0BE502F213B06B6006C3DB4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B0EBB60B213AE53000D4CCBC /* ListTableViewCell.swift */,
+				B0EBB60C213AE53000D4CCBC /* ListTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B0CF5F1C21399798007E81C1 = {
@@ -180,10 +193,11 @@
 		B0EBB606213AE34100D4CCBC /* List */ = {
 			isa = PBXGroup;
 			children = (
+				B0BE502F213B06B6006C3DB4 /* Cell */,
 				B0EBB607213AE35F00D4CCBC /* ListViewController.swift */,
 				B0EBB608213AE35F00D4CCBC /* ListViewController.xib */,
-				B0EBB60B213AE53000D4CCBC /* ListTableViewCell.swift */,
-				B0EBB60C213AE53000D4CCBC /* ListTableViewCell.xib */,
+				B0BE502B213B032E006C3DB4 /* ListViewModel.swift */,
+				B0BE502D213B03C9006C3DB4 /* ListTableViewDataSource.swift */,
 				B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */,
 			);
 			path = List;
@@ -393,10 +407,12 @@
 			files = (
 				B0CF5F2B21399798007E81C1 /* MainViewController.swift in Sources */,
 				B0EBB609213AE35F00D4CCBC /* ListViewController.swift in Sources */,
+				B0BE502E213B03C9006C3DB4 /* ListTableViewDataSource.swift in Sources */,
 				B0CF5F2921399798007E81C1 /* AppDelegate.swift in Sources */,
 				B0BE502A213AFBE7006C3DB4 /* ListInputState.swift in Sources */,
 				B0EBB612213AEE4900D4CCBC /* ButtonViewController.swift in Sources */,
 				B0EBB60D213AE53000D4CCBC /* ListTableViewCell.swift in Sources */,
+				B0BE502C213B032E006C3DB4 /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
