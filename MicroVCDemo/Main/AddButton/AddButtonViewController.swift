@@ -23,18 +23,13 @@ class AddButtonViewController: UIViewController, Instantiatable, Interactable {
     }
 
     typealias Input = String
-    typealias Output = OutputState
+    typealias Output = ListInputState
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var removeButton: UIButton!
     
-    var handler: ((OutputState) -> ())?
-    
-    enum OutputState {
-        case addCell(String)
-        case removeAll
-    }
+    var handler: ((ListInputState) -> ())?
 
-    func output(_ handler: ((OutputState) -> Void)?) {
+    func output(_ handler: ((ListInputState) -> Void)?) {
         self.handler = handler
     }
     
@@ -42,7 +37,7 @@ class AddButtonViewController: UIViewController, Instantiatable, Interactable {
         super.viewDidLoad()
         addButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.handler!(.addCell("add cell"))
+                self?.handler!(.add("add cell"))
             })
             .disposed(by: disposeBag)
         removeButton.rx.tap

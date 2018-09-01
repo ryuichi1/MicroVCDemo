@@ -31,8 +31,8 @@ class MainViewController: UIViewController, Instantiatable {
         listViewController.input(.removeAll)
         addButtonViewController.output { (outputState) in
             switch outputState {
-            case .addCell(let textString):
-                self.listViewController.input(.addCell(textString))
+            case .add(let textString):
+                self.listViewController.input(.add(textString))
             case .removeAll:
                 self.listViewController.input(.removeAll)
                 break

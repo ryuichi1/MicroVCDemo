@@ -10,9 +10,9 @@ import UIKit
 import MicroBase
 
 class ListViewController: UIViewController, Instantiatable, Injectable {
-    typealias Input = InputState
+    typealias Input = ListInputState
 
-    required init(with input: InputState) {
+    required init(with input: ListInputState) {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
@@ -20,9 +20,9 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func input(_ input: InputState) {
+    func input(_ input: ListInputState) {
         switch input {
-        case .addCell(let textString):
+        case .add(let textString):
             list.append(textString)
         case .removeAll:
             list = []
@@ -31,11 +31,6 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
     }
     
     var list: [String] = []
-    
-    enum InputState {
-        case addCell(String)
-        case removeAll
-    }
     
     @IBOutlet weak var tableView: UITableView!
     

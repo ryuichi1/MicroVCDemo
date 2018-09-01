@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0BE502A213AFBE7006C3DB4 /* ListInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */; };
 		B0CF5F2921399798007E81C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5F2821399798007E81C1 /* AppDelegate.swift */; };
 		B0CF5F2B21399798007E81C1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5F2A21399798007E81C1 /* MainViewController.swift */; };
 		B0CF5F3021399799007E81C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CF5F2F21399799007E81C1 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 /* Begin PBXFileReference section */
 		803329489752BC6416164B81 /* Pods-MicroVCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroVCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroVCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInputState.swift; sourceTree = "<group>"; };
 		B0CF5F2521399798007E81C1 /* MicroVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF5F2821399798007E81C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0CF5F2A21399798007E81C1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				B0EBB608213AE35F00D4CCBC /* ListViewController.xib */,
 				B0EBB60B213AE53000D4CCBC /* ListTableViewCell.swift */,
 				B0EBB60C213AE53000D4CCBC /* ListTableViewCell.xib */,
+				B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				B0CF5F2B21399798007E81C1 /* MainViewController.swift in Sources */,
 				B0EBB609213AE35F00D4CCBC /* ListViewController.swift in Sources */,
 				B0CF5F2921399798007E81C1 /* AppDelegate.swift in Sources */,
+				B0BE502A213AFBE7006C3DB4 /* ListInputState.swift in Sources */,
 				B0EBB612213AEE4900D4CCBC /* AddButtonViewController.swift in Sources */,
 				B0EBB60D213AE53000D4CCBC /* ListTableViewCell.swift in Sources */,
 			);
