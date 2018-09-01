@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MicroVCDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="yyh-VK-kRT" id="Q8Z-tB-yyg"/>
+                <outlet property="secondContainerView" destination="4M9-2N-WYR" id="igT-P8-O46"/>
+                <outlet property="view" destination="xkv-y4-zIg" id="bL6-He-9rz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xkv-y4-zIg">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-VK-kRT" customClass="ContainerView" customModule="MicroBase">
+                    <rect key="frame" x="48" y="70" width="280" height="50"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="estimatedHeight">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="estimatedWidth">
+                            <real key="value" value="280"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4M9-2N-WYR" customClass="ContainerView" customModule="MicroBase">
+                    <rect key="frame" x="48" y="220" width="280" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="estimatedHeight">
+                            <real key="value" value="50"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="estimatedWidth">
+                            <real key="value" value="280"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4M9-2N-WYR" firstAttribute="top" secondItem="yyh-VK-kRT" secondAttribute="bottom" constant="100" id="5lm-dE-Lno"/>
+                <constraint firstItem="yyh-VK-kRT" firstAttribute="top" secondItem="XXV-cU-lxJ" secondAttribute="top" constant="50" id="G86-rz-VY1"/>
+                <constraint firstItem="yyh-VK-kRT" firstAttribute="centerX" secondItem="xkv-y4-zIg" secondAttribute="centerX" id="RAV-vT-MSU"/>
+                <constraint firstItem="4M9-2N-WYR" firstAttribute="centerX" secondItem="xkv-y4-zIg" secondAttribute="centerX" id="ZLu-m0-KIC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="XXV-cU-lxJ"/>
+            <point key="canvasLocation" x="556" y="42"/>
+        </view>
+    </objects>
+</document>
