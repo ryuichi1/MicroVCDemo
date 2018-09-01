@@ -7,5 +7,6 @@ target 'MicroVCDemo' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Mew', :git => 'https://github.com/mercari/Mew.git'
 end
 
