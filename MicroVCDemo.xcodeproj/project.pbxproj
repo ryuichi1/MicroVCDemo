@@ -27,6 +27,7 @@
 		B0CF5FBD21399F51007E81C1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF5FBC21399F51007E81C1 /* MainViewController.xib */; };
 		B0CF5FC02139A2E4007E81C1 /* MainTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF5FBF2139A2E4007E81C1 /* MainTextViewController.xib */; };
 		B0CF5FC22139A300007E81C1 /* MainTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5FC12139A300007E81C1 /* MainTextViewController.swift */; };
+		BF3B2C33F0A49F324B5F3F5F /* Pods_MicroVCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		803329489752BC6416164B81 /* Pods-MicroVCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroVCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroVCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF5F2521399798007E81C1 /* MicroVCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroVCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CF5F2821399798007E81C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0CF5F2A21399798007E81C1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		B0CF5FBC21399F51007E81C1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		B0CF5FBF2139A2E4007E81C1 /* MainTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTextViewController.xib; sourceTree = "<group>"; };
 		B0CF5FC12139A300007E81C1 /* MainTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextViewController.swift; sourceTree = "<group>"; };
+		E6DE809534F9A0E345923FAA /* Pods-MicroVCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroVCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0CF5F7021399940007E81C1 /* MicroBase.framework in Frameworks */,
+				BF3B2C33F0A49F324B5F3F5F /* Pods_MicroVCDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +157,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C66B7AF2C1908DB2269DFD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0CF5F1C21399798007E81C1 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +174,8 @@
 				B0CF5F5C21399940007E81C1 /* MicroBase */,
 				B0CF5F6921399940007E81C1 /* MicroBaseTests */,
 				B0CF5F2621399798007E81C1 /* Products */,
+				B3B0A01FC446CD9B4361840D /* Pods */,
+				6C66B7AF2C1908DB2269DFD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,6 +280,15 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		B3B0A01FC446CD9B4361840D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6DE809534F9A0E345923FAA /* Pods-MicroVCDemo.debug.xcconfig */,
+				803329489752BC6416164B81 /* Pods-MicroVCDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -283,10 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0CF5F4D2139979A007E81C1 /* Build configuration list for PBXNativeTarget "MicroVCDemo" */;
 			buildPhases = (
+				E8579C53D3D531B8C2F7E28D /* [CP] Check Pods Manifest.lock */,
 				B0CF5F2121399798007E81C1 /* Sources */,
 				B0CF5F2221399798007E81C1 /* Frameworks */,
 				B0CF5F2321399798007E81C1 /* Resources */,
 				B0CF5F7521399940007E81C1 /* Embed Frameworks */,
+				77D8867E20E6FF674C52E23F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -466,6 +492,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77D8867E20E6FF674C52E23F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8579C53D3D531B8C2F7E28D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MicroVCDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0CF5F2121399798007E81C1 /* Sources */ = {
@@ -672,6 +743,7 @@
 		};
 		B0CF5F4E2139979A007E81C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DE809534F9A0E345923FAA /* Pods-MicroVCDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -691,6 +763,7 @@
 		};
 		B0CF5F4F2139979A007E81C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 803329489752BC6416164B81 /* Pods-MicroVCDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
