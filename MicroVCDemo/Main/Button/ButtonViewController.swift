@@ -7,16 +7,20 @@
 //
 
 import UIKit
-import MicroBase
+import Mew
 import RxSwift
 import RxCocoa
 
 class ButtonViewController: UIViewController, Instantiatable, Interactable {
-    let disposeBag = DisposeBag()
+    var environment: EnvironmentMock
     
-    required init(with input: String) {
+    required init(with input: String, environment: EnvironmentMock) {
+        self.environment = environment
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
+    
+    typealias Environment = EnvironmentMock
+    let disposeBag = DisposeBag()
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

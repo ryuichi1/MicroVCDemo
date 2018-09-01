@@ -22,11 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-g0-L28" customClass="ContainerView" customModule="MicroBase">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-g0-L28" customClass="ContainerView" customModule="Mew">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vx-fj-gdP" customClass="ContainerView" customModule="MicroBase">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vx-fj-gdP" customClass="ContainerView" customModule="Mew">
                     <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
