@@ -15,7 +15,7 @@ class MainViewController: UIViewController, Instantiatable {
     
     typealias Input = Void
     lazy var listViewController = self.containerView.makeContainer(for: ListViewController.self, parent: self)
-    lazy var addButtonViewController = self.buttonContainerView.makeContainer(for: AddButtonViewController.self, parent: self, with: "")
+    lazy var buttonViewController = self.buttonContainerView.makeContainer(for: ButtonViewController.self, parent: self, with: "")
 
     required init(with input: Input) {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
@@ -29,7 +29,7 @@ class MainViewController: UIViewController, Instantiatable {
         super.viewDidLoad()
         navigationItem.title = "MainViewController"
         listViewController.input(.removeAll)
-        addButtonViewController.output { (outputState) in
+        buttonViewController.output { (outputState) in
             switch outputState {
             case .add(let textString):
                 self.listViewController.input(.add(textString))

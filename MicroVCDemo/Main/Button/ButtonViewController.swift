@@ -11,7 +11,7 @@ import MicroBase
 import RxSwift
 import RxCocoa
 
-class AddButtonViewController: UIViewController, Instantiatable, Interactable {
+class ButtonViewController: UIViewController, Instantiatable, Interactable {
     let disposeBag = DisposeBag()
     
     required init(with input: String) {

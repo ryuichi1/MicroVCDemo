@@ -26,14 +26,12 @@
 		B0CF5FB821399B6B007E81C1 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5FB721399B6B007E81C1 /* ContainerView.swift */; };
 		B0CF5FBA21399B8D007E81C1 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5FB921399B8D007E81C1 /* Container.swift */; };
 		B0CF5FBD21399F51007E81C1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF5FBC21399F51007E81C1 /* MainViewController.xib */; };
-		B0CF5FC02139A2E4007E81C1 /* MainTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF5FBF2139A2E4007E81C1 /* MainTextViewController.xib */; };
-		B0CF5FC22139A300007E81C1 /* MainTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5FC12139A300007E81C1 /* MainTextViewController.swift */; };
 		B0EBB609213AE35F00D4CCBC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBB607213AE35F00D4CCBC /* ListViewController.swift */; };
 		B0EBB60A213AE35F00D4CCBC /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EBB608213AE35F00D4CCBC /* ListViewController.xib */; };
 		B0EBB60D213AE53000D4CCBC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBB60B213AE53000D4CCBC /* ListTableViewCell.swift */; };
 		B0EBB60E213AE53000D4CCBC /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EBB60C213AE53000D4CCBC /* ListTableViewCell.xib */; };
-		B0EBB612213AEE4900D4CCBC /* AddButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBB610213AEE4900D4CCBC /* AddButtonViewController.swift */; };
-		B0EBB613213AEE4900D4CCBC /* AddButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EBB611213AEE4900D4CCBC /* AddButtonViewController.xib */; };
+		B0EBB612213AEE4900D4CCBC /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBB610213AEE4900D4CCBC /* ButtonViewController.swift */; };
+		B0EBB613213AEE4900D4CCBC /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EBB611213AEE4900D4CCBC /* ButtonViewController.xib */; };
 		BF3B2C33F0A49F324B5F3F5F /* Pods_MicroVCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,14 +116,12 @@
 		B0CF5FB721399B6B007E81C1 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		B0CF5FB921399B8D007E81C1 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		B0CF5FBC21399F51007E81C1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		B0CF5FBF2139A2E4007E81C1 /* MainTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTextViewController.xib; sourceTree = "<group>"; };
-		B0CF5FC12139A300007E81C1 /* MainTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextViewController.swift; sourceTree = "<group>"; };
 		B0EBB607213AE35F00D4CCBC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B0EBB608213AE35F00D4CCBC /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		B0EBB60B213AE53000D4CCBC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		B0EBB60C213AE53000D4CCBC /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
-		B0EBB610213AEE4900D4CCBC /* AddButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonViewController.swift; sourceTree = "<group>"; };
-		B0EBB611213AEE4900D4CCBC /* AddButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddButtonViewController.xib; sourceTree = "<group>"; };
+		B0EBB610213AEE4900D4CCBC /* ButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		B0EBB611213AEE4900D4CCBC /* ButtonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
 		E6DE809534F9A0E345923FAA /* Pods-MicroVCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroVCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,22 +274,12 @@
 		B0CF5FBB21399C39007E81C1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B0EBB60F213AEE2300D4CCBC /* AddButton */,
+				B0EBB60F213AEE2300D4CCBC /* Button */,
 				B0EBB606213AE34100D4CCBC /* List */,
-				B0CF5FBE2139A2C6007E81C1 /* Text */,
 				B0CF5F2A21399798007E81C1 /* MainViewController.swift */,
 				B0CF5FBC21399F51007E81C1 /* MainViewController.xib */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		B0CF5FBE2139A2C6007E81C1 /* Text */ = {
-			isa = PBXGroup;
-			children = (
-				B0CF5FBF2139A2E4007E81C1 /* MainTextViewController.xib */,
-				B0CF5FC12139A300007E81C1 /* MainTextViewController.swift */,
-			);
-			path = Text;
 			sourceTree = "<group>";
 		};
 		B0EBB606213AE34100D4CCBC /* List */ = {
@@ -308,13 +294,13 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		B0EBB60F213AEE2300D4CCBC /* AddButton */ = {
+		B0EBB60F213AEE2300D4CCBC /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				B0EBB610213AEE4900D4CCBC /* AddButtonViewController.swift */,
-				B0EBB611213AEE4900D4CCBC /* AddButtonViewController.xib */,
+				B0EBB610213AEE4900D4CCBC /* ButtonViewController.swift */,
+				B0EBB611213AEE4900D4CCBC /* ButtonViewController.xib */,
 			);
-			path = AddButton;
+			path = Button;
 			sourceTree = "<group>";
 		};
 		B3B0A01FC446CD9B4361840D /* Pods */ = {
@@ -492,12 +478,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0CF5FC02139A2E4007E81C1 /* MainTextViewController.xib in Resources */,
 				B0EBB60E213AE53000D4CCBC /* ListTableViewCell.xib in Resources */,
 				B0CF5F3321399799007E81C1 /* LaunchScreen.storyboard in Resources */,
 				B0EBB60A213AE35F00D4CCBC /* ListViewController.xib in Resources */,
 				B0CF5FBD21399F51007E81C1 /* MainViewController.xib in Resources */,
-				B0EBB613213AEE4900D4CCBC /* AddButtonViewController.xib in Resources */,
+				B0EBB613213AEE4900D4CCBC /* ButtonViewController.xib in Resources */,
 				B0CF5F3021399799007E81C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,12 +568,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0CF5FC22139A300007E81C1 /* MainTextViewController.swift in Sources */,
 				B0CF5F2B21399798007E81C1 /* MainViewController.swift in Sources */,
 				B0EBB609213AE35F00D4CCBC /* ListViewController.swift in Sources */,
 				B0CF5F2921399798007E81C1 /* AppDelegate.swift in Sources */,
 				B0BE502A213AFBE7006C3DB4 /* ListInputState.swift in Sources */,
-				B0EBB612213AEE4900D4CCBC /* AddButtonViewController.swift in Sources */,
+				B0EBB612213AEE4900D4CCBC /* ButtonViewController.swift in Sources */,
 				B0EBB60D213AE53000D4CCBC /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
