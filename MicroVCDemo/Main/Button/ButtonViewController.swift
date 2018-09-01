@@ -12,30 +12,29 @@ import RxSwift
 import RxCocoa
 
 class ButtonViewController: UIViewController, Instantiatable, Interactable {
-    var environment: EnvironmentMock
+    typealias Environment = EnvironmentMock
+    typealias Input = String
+    typealias Output = ListInputState
     
     required init(with input: String, environment: EnvironmentMock) {
         self.environment = environment
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
-    typealias Environment = EnvironmentMock
-    let disposeBag = DisposeBag()
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    typealias Input = String
-    typealias Output = ListInputState
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var removeButton: UIButton!
     
-    var handler: ((ListInputState) -> ())?
-
     func output(_ handler: ((ListInputState) -> Void)?) {
         self.handler = handler
     }
+    
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var removeButton: UIButton!
+    
+    var environment: EnvironmentMock
+    var handler: ((ListInputState) -> ())?
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()

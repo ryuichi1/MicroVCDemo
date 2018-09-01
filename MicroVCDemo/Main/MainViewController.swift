@@ -12,23 +12,24 @@ import Mew
 class EnvironmentMock { }
 
 class MainViewController: UIViewController, Instantiatable {
+    typealias Environment = EnvironmentMock
+    typealias Input = Void
+
     required init(with input: Void, environment: EnvironmentMock) {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
     
-    typealias Environment = EnvironmentMock
-    
-    @IBOutlet weak var containerView: ContainerView!
-    @IBOutlet weak var buttonContainerView: ContainerView!
-    var environment = EnvironmentMock()
-    
-    typealias Input = Void
-    lazy var listViewController = self.containerView.makeContainer(for: ListViewController.self, parent: self)
-    lazy var buttonViewController = self.buttonContainerView.makeContainer(for: ButtonViewController.self, parent: self, with: "")
-
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @IBOutlet weak var containerView: ContainerView!
+    @IBOutlet weak var buttonContainerView: ContainerView!
+    
+    var environment = EnvironmentMock()
+    
+    lazy var listViewController = self.containerView.makeContainer(for: ListViewController.self, parent: self)
+    lazy var buttonViewController = self.buttonContainerView.makeContainer(for: ButtonViewController.self, parent: self, with: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
