@@ -28,9 +28,15 @@ class MainViewController: UIViewController, Instantiatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "MainViewController"
-        listViewController.input("")
-        addButtonViewController.output { (output) in
-            self.listViewController.input(output)
+        listViewController.input(.removeAll)
+        addButtonViewController.output { (outputState) in
+            switch outputState {
+            case .addCell(let textString):
+                self.listViewController.input(.addCell(textString))
+            case .removeAll:
+                self.listViewController.input(.removeAll)
+                break
+            }
         }
     }
 
