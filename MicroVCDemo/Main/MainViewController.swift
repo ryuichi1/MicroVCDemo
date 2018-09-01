@@ -11,11 +11,11 @@ import MicroBase
 
 class MainViewController: UIViewController, Instantiatable {
     @IBOutlet weak var containerView: ContainerView!
-    @IBOutlet weak var secondContainerView: ContainerView!
+    @IBOutlet weak var buttonContainerView: ContainerView!
     
     typealias Input = Void
-    lazy var textViewController = self.containerView.makeContainer(for: MainTextViewController.self, parent: self)
-    lazy var secondTextViewController = self.secondContainerView.makeContainer(for: MainTextViewController.self, parent: self)
+    lazy var listViewController = self.containerView.makeContainer(for: ListViewController.self, parent: self)
+    lazy var addButtonViewController = self.buttonContainerView.makeContainer(for: AddButtonViewController.self, parent: self, with: "")
 
     required init(with input: Input) {
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
@@ -28,8 +28,10 @@ class MainViewController: UIViewController, Instantiatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "MainViewController"
-        textViewController.input(MainTextViewController.Model(text: "hello world"))
-        secondTextViewController.input(MainTextViewController.Model(text: "second test"))
+        listViewController.input("")
+        addButtonViewController.output { (output) in
+            self.listViewController.input(output)
+        }
     }
 
     override func didReceiveMemoryWarning() {

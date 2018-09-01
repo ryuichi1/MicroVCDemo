@@ -12,8 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MicroVCDemo" customModuleProvider="target">
             <connections>
-                <outlet property="containerView" destination="yyh-VK-kRT" id="Q8Z-tB-yyg"/>
-                <outlet property="secondContainerView" destination="4M9-2N-WYR" id="igT-P8-O46"/>
+                <outlet property="buttonContainerView" destination="6vx-fj-gdP" id="96I-vi-6eX"/>
+                <outlet property="containerView" destination="kOz-g0-L28" id="WfX-fE-qVQ"/>
                 <outlet property="view" destination="xkv-y4-zIg" id="bL6-He-9rz"/>
             </connections>
         </placeholder>
@@ -22,39 +22,33 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yyh-VK-kRT" customClass="ContainerView" customModule="MicroBase">
-                    <rect key="frame" x="48" y="70" width="280" height="50"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="estimatedHeight">
-                            <real key="value" value="50"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="estimatedWidth">
-                            <real key="value" value="280"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </stackView>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4M9-2N-WYR" customClass="ContainerView" customModule="MicroBase">
-                    <rect key="frame" x="48" y="220" width="280" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-g0-L28" customClass="ContainerView" customModule="MicroBase">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vx-fj-gdP" customClass="ContainerView" customModule="MicroBase">
+                    <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="estimatedHeight">
-                            <real key="value" value="50"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="estimatedWidth">
-                            <real key="value" value="280"/>
+                            <real key="value" value="100"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="4M9-2N-WYR" firstAttribute="top" secondItem="yyh-VK-kRT" secondAttribute="bottom" constant="100" id="5lm-dE-Lno"/>
-                <constraint firstItem="yyh-VK-kRT" firstAttribute="top" secondItem="XXV-cU-lxJ" secondAttribute="top" constant="50" id="G86-rz-VY1"/>
-                <constraint firstItem="yyh-VK-kRT" firstAttribute="centerX" secondItem="xkv-y4-zIg" secondAttribute="centerX" id="RAV-vT-MSU"/>
-                <constraint firstItem="4M9-2N-WYR" firstAttribute="centerX" secondItem="xkv-y4-zIg" secondAttribute="centerX" id="ZLu-m0-KIC"/>
+                <constraint firstItem="XXV-cU-lxJ" firstAttribute="trailing" secondItem="kOz-g0-L28" secondAttribute="trailing" id="5US-K9-03E"/>
+                <constraint firstItem="kOz-g0-L28" firstAttribute="leading" secondItem="XXV-cU-lxJ" secondAttribute="leading" id="8m6-hJ-Wf1"/>
+                <constraint firstItem="XXV-cU-lxJ" firstAttribute="trailing" secondItem="6vx-fj-gdP" secondAttribute="trailing" id="aOC-tM-xyk"/>
+                <constraint firstAttribute="bottom" secondItem="6vx-fj-gdP" secondAttribute="bottom" id="eWr-E9-b3g"/>
+                <constraint firstItem="6vx-fj-gdP" firstAttribute="leading" secondItem="XXV-cU-lxJ" secondAttribute="leading" id="fdm-1F-Ten"/>
+                <constraint firstItem="kOz-g0-L28" firstAttribute="top" secondItem="xkv-y4-zIg" secondAttribute="top" id="pAO-ee-Wku"/>
+                <constraint firstItem="6vx-fj-gdP" firstAttribute="top" secondItem="kOz-g0-L28" secondAttribute="bottom" id="qRE-iF-DZU"/>
+                <constraint firstItem="XXV-cU-lxJ" firstAttribute="bottom" secondItem="kOz-g0-L28" secondAttribute="bottom" constant="100" id="xN0-Ie-suB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="XXV-cU-lxJ"/>
-            <point key="canvasLocation" x="556" y="42"/>
+            <point key="canvasLocation" x="555.5" y="41.5"/>
         </view>
     </objects>
 </document>
