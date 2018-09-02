@@ -35,14 +35,6 @@ class MainViewController: UIViewController, Instantiatable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCallback()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func setCallback() {
         navigationItem.title = "MainViewController"
         buttonViewController.output { (outputState) in
             switch outputState {
@@ -52,6 +44,10 @@ class MainViewController: UIViewController, Instantiatable {
                 self.listViewController.input(.removeAll)
             }
         }
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     func reqeust() {
