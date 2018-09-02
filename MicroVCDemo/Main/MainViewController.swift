@@ -36,7 +36,6 @@ class MainViewController: UIViewController, Instantiatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCallback()
-        listViewController.input(nil)
     }
 
     override func didReceiveMemoryWarning() {
