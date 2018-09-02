@@ -17,6 +17,7 @@
 		B0CF5F3E2139979A007E81C1 /* MicroVCDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5F3D2139979A007E81C1 /* MicroVCDemoTests.swift */; };
 		B0CF5F492139979A007E81C1 /* MicroVCDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CF5F482139979A007E81C1 /* MicroVCDemoUITests.swift */; };
 		B0CF5FBD21399F51007E81C1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CF5FBC21399F51007E81C1 /* MainViewController.xib */; };
+		B0D16D40213C002B00456047 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D16D3F213C002B00456047 /* UITableView+Extension.swift */; };
 		B0EBB609213AE35F00D4CCBC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBB607213AE35F00D4CCBC /* ListViewController.swift */; };
 		B0EBB60A213AE35F00D4CCBC /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EBB608213AE35F00D4CCBC /* ListViewController.xib */; };
 		B0EBB60D213AE53000D4CCBC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EBB60B213AE53000D4CCBC /* ListTableViewCell.swift */; };
@@ -75,6 +76,7 @@
 		B0CF5F482139979A007E81C1 /* MicroVCDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroVCDemoUITests.swift; sourceTree = "<group>"; };
 		B0CF5F4A2139979A007E81C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0CF5FBC21399F51007E81C1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		B0D16D3F213C002B00456047 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		B0EBB607213AE35F00D4CCBC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B0EBB608213AE35F00D4CCBC /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		B0EBB60B213AE53000D4CCBC /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		B0CF5F2721399798007E81C1 /* MicroVCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B0D16D3E213C001900456047 /* Extension */,
 				B0CF5FBB21399C39007E81C1 /* Main */,
 				B0CF5F2821399798007E81C1 /* AppDelegate.swift */,
 				B0CF5F2F21399799007E81C1 /* Assets.xcassets */,
@@ -188,6 +191,14 @@
 				B0CF5FBC21399F51007E81C1 /* MainViewController.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B0D16D3E213C001900456047 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B0D16D3F213C002B00456047 /* UITableView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B0EBB606213AE34100D4CCBC /* List */ = {
@@ -407,6 +418,7 @@
 			files = (
 				B0CF5F2B21399798007E81C1 /* MainViewController.swift in Sources */,
 				B0EBB609213AE35F00D4CCBC /* ListViewController.swift in Sources */,
+				B0D16D40213C002B00456047 /* UITableView+Extension.swift in Sources */,
 				B0BE502E213B03C9006C3DB4 /* ListTableViewDataSource.swift in Sources */,
 				B0CF5F2921399798007E81C1 /* AppDelegate.swift in Sources */,
 				B0BE502A213AFBE7006C3DB4 /* ListInputState.swift in Sources */,

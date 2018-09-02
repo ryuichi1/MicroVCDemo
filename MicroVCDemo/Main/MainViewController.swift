@@ -34,7 +34,6 @@ class MainViewController: UIViewController, Instantiatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "MainViewController"
-        listViewController.input(.removeAll)
         buttonViewController.output { (outputState) in
             switch outputState {
             case .add(let textString):

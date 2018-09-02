@@ -28,8 +28,7 @@ extension ListTableViewDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt
         indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:
-            "ListTableViewCell", for: indexPath) as! ListTableViewCell
+        let cell = tableView.dequeueReusableCell(with: ListTableViewCell.self, for: indexPath)
         cell.label.text = items[indexPath.row]
         return cell
     }

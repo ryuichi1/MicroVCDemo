@@ -55,7 +55,6 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
     }
     
     func constructCell() {
-        let nib = UINib(nibName: "ListTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ListTableViewCell")
+        tableView.register(cellType: ListTableViewCell.self)
     }
 }
