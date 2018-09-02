@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import DataModel
 
 enum ListInputState {
-    case add(String)
+    case add(Article)
+    case someAdd([Article])
     case removeAll
 }

@@ -9,7 +9,8 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import DataModel
 
 class ListViewModel: NSObject {
-    var items = Variable<[String]>([])
+    var items = Variable<[Article]>([])
 }

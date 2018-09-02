@@ -10,13 +10,14 @@ import UIKit
 import Mew
 import RxSwift
 import RxCocoa
+import DataModel
 
 class ButtonViewController: UIViewController, Instantiatable, Interactable {
     typealias Environment = EnvironmentMock
-    typealias Input = String
+    typealias Input = Article?
     typealias Output = ListInputState
     
-    required init(with input: String, environment: EnvironmentMock) {
+    required init(with input: Article?, environment: EnvironmentMock) {
         self.environment = environment
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
@@ -40,7 +41,7 @@ class ButtonViewController: UIViewController, Instantiatable, Interactable {
         super.viewDidLoad()
         addButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.handler!(.add("add cell"))
+                self?.handler!(.add(Article(title: "test", userId: "test_user")))
             })
             .disposed(by: disposeBag)
         removeButton.rx.tap

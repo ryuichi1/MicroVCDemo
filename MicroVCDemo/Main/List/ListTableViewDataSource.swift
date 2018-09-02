@@ -9,9 +9,10 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import DataModel
 
 class ListTableViewDataSource: NSObject {
-    typealias Element = [String]
+    typealias Element = [Article]
     var items: Element = []
     
     init(items: Element) {
@@ -29,14 +30,14 @@ extension ListTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt
         indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: ListTableViewCell.self, for: indexPath)
-        cell.label.text = items[indexPath.row]
+        cell.label.text = items[indexPath.row].title
         return cell
     }
 }
 
 extension ListTableViewDataSource: RxTableViewDataSourceType {
     func tableView(_ tableView: UITableView, observedEvent:
-        Event<[String]>) {
+        Event<[Article]>) {
         Binder(self) { (dataSource, element) in
             dataSource.items = element
             tableView.reloadData()

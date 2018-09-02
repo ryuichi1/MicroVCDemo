@@ -8,6 +8,7 @@
 
 import UIKit
 import Mew
+import Service
 
 class EnvironmentMock { }
 
@@ -29,23 +30,39 @@ class MainViewController: UIViewController, Instantiatable {
     var environment = EnvironmentMock()
     
     lazy var listViewController = self.containerView.makeContainer(for: ListViewController.self, parent: self)
-    lazy var buttonViewController = self.buttonContainerView.makeContainer(for: ButtonViewController.self, parent: self, with: "")
+    lazy var buttonViewController = self.buttonContainerView.makeContainer(for: ButtonViewController.self, parent: self, with: nil)
+    var qiitaService = QiitaService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "MainViewController"
-        buttonViewController.output { (outputState) in
-            switch outputState {
-            case .add(let textString):
-                self.listViewController.input(.add(textString))
-            case .removeAll:
-                self.listViewController.input(.removeAll)
-                break
-            }
-        }
+        setCallback()
+        listViewController.input(nil)
+//        reqeust()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func setCallback() {
+        navigationItem.title = "MainViewController"
+        buttonViewController.output { (outputState) in
+            switch outputState {
+            case .add(let textString):
+//                self.listViewController.input(.add(textString))
+                self.reqeust()
+            case .removeAll:
+                self.listViewController.input(.removeAll)
+            case .someAdd(_):
+                
+                break
+            }
+        }
+    }
+    
+    func reqeust() {
+        self.qiitaService.request(handler: { (articles) in
+            self.listViewController.input(.someAdd(articles))
+        })
     }
 }

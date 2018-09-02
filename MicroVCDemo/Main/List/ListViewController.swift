@@ -10,12 +10,21 @@ import UIKit
 import Mew
 import RxCocoa
 import RxSwift
+import DataModel
 
 class ListViewController: UIViewController, Instantiatable, Injectable {
     typealias Environment = EnvironmentMock
     typealias Input = ListInputState
     
     required init(with input: ListInputState, environment: EnvironmentMock) {
+        switch input {
+        case .add(let article):
+            firstData.append(article)
+        case .removeAll:
+            firstData.removeAll()
+        case .someAdd(let articles):
+            firstData += articles
+        }
         self.environment = environment
         super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
     }
@@ -26,10 +35,12 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
     
     func input(_ input: ListInputState) {
         switch input {
-        case .add(let textString):
-            listViewModel.items.value.append(textString)
+        case .add(let article):
+            listViewModel.items.value.append(article)
         case .removeAll:
-            listViewModel.items.value = []
+            listViewModel.items.value.removeAll()
+        case .someAdd(let articles):
+            listViewModel.items.value += articles
         }
         tableView.reloadData()
     }
@@ -38,6 +49,7 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
     var dataSource: ListTableViewDataSource!
     var listViewModel = ListViewModel()
     let disposeBag = DisposeBag()
+    var firstData: [Article] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -48,6 +60,7 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
         listViewModel.items.asDriver()
             .drive(self.tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        listViewModel.items.value = firstData
     }
 
     override func didReceiveMemoryWarning() {
