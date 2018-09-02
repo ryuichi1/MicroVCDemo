@@ -15,7 +15,12 @@ import DataModel
 class ButtonViewController: UIViewController, Instantiatable, Interactable {
     typealias Environment = EnvironmentMock
     typealias Input = Article?
-    typealias Output = ListInputState
+    typealias Output = ButtonType
+    
+    enum ButtonType {
+        case request
+        case removeAll
+    }
     
     required init(with input: Article?, environment: EnvironmentMock) {
         self.environment = environment
@@ -26,7 +31,7 @@ class ButtonViewController: UIViewController, Instantiatable, Interactable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func output(_ handler: ((ListInputState) -> Void)?) {
+    func output(_ handler: ((ButtonType) -> Void)?) {
         self.handler = handler
     }
     
@@ -34,14 +39,14 @@ class ButtonViewController: UIViewController, Instantiatable, Interactable {
     @IBOutlet weak var removeButton: UIButton!
     
     var environment: EnvironmentMock
-    var handler: ((ListInputState) -> ())?
+    var handler: ((ButtonType) -> ())?
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                self?.handler!(.add(Article(title: "test", userId: "test_user")))
+                self?.handler!(.request)
             })
             .disposed(by: disposeBag)
         removeButton.rx.tap
