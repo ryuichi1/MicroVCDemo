@@ -17,7 +17,7 @@ class MainViewController: UIViewController, Instantiatable {
     typealias Input = Void
 
     required init(with input: Void, environment: EnvironmentMock) {
-        super.init(nibName: nil, bundle: Bundle(for: type(of: self)))
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -45,14 +45,14 @@ class MainViewController: UIViewController, Instantiatable {
             }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     func reqeust() {
         self.qiitaService.request(handler: { (articles) in
             self.listViewController.input(.someAdd(articles))
         })
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }

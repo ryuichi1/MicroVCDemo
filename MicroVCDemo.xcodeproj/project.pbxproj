@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E8831508B0BE7C7880667FA /* Pods_Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63426B9910F9888647AC2224 /* Pods_Service.framework */; };
+		B02C8123214A250000EB7F31 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02C8122214A250000EB7F31 /* Storyboard.storyboard */; };
 		B0BE502A213AFBE7006C3DB4 /* ListInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */; };
 		B0BE502C213B032E006C3DB4 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE502B213B032E006C3DB4 /* ListViewModel.swift */; };
 		B0BE502E213B03C9006C3DB4 /* ListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE502D213B03C9006C3DB4 /* ListTableViewDataSource.swift */; };
@@ -119,6 +120,7 @@
 		63426B9910F9888647AC2224 /* Pods_Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		803329489752BC6416164B81 /* Pods-MicroVCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroVCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroVCDemo/Pods-MicroVCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		88C7C3794BAA632B7E571D1F /* Pods_MicroVCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MicroVCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02C8122214A250000EB7F31 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		B0BE5029213AFBE7006C3DB4 /* ListInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInputState.swift; sourceTree = "<group>"; };
 		B0BE502B213B032E006C3DB4 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		B0BE502D213B03C9006C3DB4 /* ListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				B0EBB606213AE34100D4CCBC /* List */,
 				B0CF5F2A21399798007E81C1 /* MainViewController.swift */,
 				B0CF5FBC21399F51007E81C1 /* MainViewController.xib */,
+				B02C8122214A250000EB7F31 /* Storyboard.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				B0EBB60A213AE35F00D4CCBC /* ListViewController.xib in Resources */,
 				B0CF5FBD21399F51007E81C1 /* MainViewController.xib in Resources */,
 				B0EBB613213AEE4900D4CCBC /* ButtonViewController.xib in Resources */,
+				B02C8123214A250000EB7F31 /* Storyboard.storyboard in Resources */,
 				B0CF5F3021399799007E81C1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

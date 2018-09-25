@@ -55,7 +55,7 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        constructCell()
+        tableView.register(cellType: ListTableViewCell.self)
         dataSource = ListTableViewDataSource(items: listViewModel.items.value)
         listViewModel.items.asDriver()
             .drive(self.tableView.rx.items(dataSource: dataSource))
@@ -65,9 +65,5 @@ class ListViewController: UIViewController, Instantiatable, Injectable {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func constructCell() {
-        tableView.register(cellType: ListTableViewCell.self)
     }
 }

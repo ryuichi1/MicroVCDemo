@@ -36,6 +36,7 @@
             <connections>
                 <outlet property="label" destination="zpZ-JD-p33" id="vlc-ql-3bG"/>
             </connections>
+            <point key="canvasLocation" x="21" y="54"/>
         </tableViewCell>
     </objects>
 </document>
